@@ -2,149 +2,64 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#14251f">
-  <meta name="description" content="Manual de montagem do console portátil Hands on Lab.">
-  <title>Hands on Lab — Manual de montagem</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Monte um console portátil por etapas. Aprenda eletrônica construindo algo de verdade.">
+  <title>Hands on Lab — Construa seu próprio videogame</title>
+  <link rel="icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-:root{--ink:#17221e;--paper:#f4f0e5;--card:#fffdf6;--green:#195f4b;--lime:#d7ef73;--orange:#ef7f4b;--line:#d9d3c5;--muted:#667069}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}.topbar{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,6vw,92px);border-bottom:1px solid rgba(23,34,30,.14);position:sticky;top:0;background:rgba(244,240,229,.9);backdrop-filter:blur(14px);z-index:20}.brand{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font:700 15px "Space Grotesk";letter-spacing:.12em}.brand-mark{width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:20px}.topbar nav{display:flex;align-items:center;gap:28px}.topbar nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}.nav-cta{padding:11px 17px;border:1px solid var(--ink);border-radius:999px}.hero{min-height:680px;padding:80px clamp(24px,7vw,110px);display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;overflow:hidden}.eyebrow{font:700 12px "Space Grotesk";letter-spacing:.18em;color:var(--green);margin:0 0 20px}.hero h1{font:700 clamp(56px,7.5vw,108px)/.86 "Space Grotesk";letter-spacing:-.065em;margin:0;max-width:760px}.hero h1 span,.finale h2 span{color:var(--green)}.lead{font-size:19px;line-height:1.65;color:var(--muted);max-width:630px;margin:30px 0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-flex;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px}.button.primary{background:var(--ink);color:white}.button.ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.35)}.quick-facts{display:flex;gap:34px;margin-top:44px;color:var(--muted);font-size:13px}.quick-facts span{display:grid}.quick-facts strong{font:700 25px "Space Grotesk";color:var(--ink)}.console-scene{min-height:500px;position:relative;display:grid;place-items:center}.orbit{position:absolute;border:1px solid rgba(25,95,75,.25);border-radius:50%}.orbit-one{width:470px;height:470px}.orbit-two{width:350px;height:350px}.console{position:relative;width:min(480px,90vw);aspect-ratio:1.55;background:#24483c;border-radius:44px;box-shadow:0 38px 60px rgba(23,34,30,.23),inset 0 0 0 4px rgba(255,255,255,.08);transform:rotate(-4deg);z-index:2}.screen{position:absolute;left:24%;top:16%;width:52%;height:54%;border:10px solid #102019;border-radius:12px;background:linear-gradient(145deg,#dbef7c,#87c49d);display:grid;place-content:center;text-align:center;color:#17382d;font:700 28px "Space Grotesk";box-shadow:inset 0 0 35px rgba(20,37,31,.18)}.screen small{font-size:8px;letter-spacing:.2em;margin-top:8px}.dpad{position:absolute;left:8%;top:37%;width:72px;height:72px}.dpad i{position:absolute;background:#15261f;border-radius:7px}.dpad i:first-child{width:26px;height:72px;left:23px}.dpad i:last-child{height:26px;width:72px;top:23px}.buttons{position:absolute;right:7%;top:34%;width:82px;height:82px}.buttons i{position:absolute;width:25px;height:25px;border-radius:50%;background:var(--orange);box-shadow:inset 0 -4px rgba(0,0,0,.18)}.buttons i:nth-child(1){top:0;left:29px}.buttons i:nth-child(2){top:29px;right:0}.buttons i:nth-child(3){bottom:0;left:29px}.buttons i:nth-child(4){top:29px;left:0}.mini-buttons{position:absolute;bottom:12%;left:43%;display:flex;gap:12px}.mini-buttons i{width:26px;height:8px;border-radius:5px;background:#11231c}.intro,.manual{padding:110px clamp(24px,7vw,110px)}.intro{background:var(--ink);color:white}.intro>.eyebrow{color:var(--lime)}.intro h2,.section-heading h2,.safety h2,.finale h2{font:700 clamp(36px,5vw,65px)/1 "Space Grotesk";letter-spacing:-.045em;margin:0}.intro>p:not(.eyebrow){color:#b8c2bd;max-width:650px;font-size:18px;line-height:1.6}.journey{display:grid;grid-template-columns:repeat(6,1fr);margin-top:70px;border-top:1px solid #52605a}.journey article{padding:28px 16px 24px 0;border-right:1px solid #52605a;display:flex;flex-direction:column;min-height:170px}.journey b{color:var(--lime);font:600 13px "Space Grotesk"}.journey span{font:600 20px "Space Grotesk";margin-top:auto}.journey small{color:#9faaa5;margin-top:7px}.safety{margin:70px clamp(24px,7vw,110px);padding:52px;display:grid;grid-template-columns:auto 1fr;gap:38px;border:2px solid var(--orange);background:#fff6ed;border-radius:24px}.safety-icon{width:66px;height:66px;border-radius:50%;background:var(--orange);color:white;display:grid;place-items:center;font:700 36px "Space Grotesk"}.safety h2{font-size:38px}.safety ul{padding-left:20px;line-height:1.8;color:#5d554e}.section-heading{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:52px}.section-heading>p{color:var(--muted);line-height:1.6;max-width:500px}.chapters{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line)}summary{list-style:none;display:grid;grid-template-columns:70px 1fr 40px;align-items:center;padding:27px 4px;cursor:pointer}summary::-webkit-details-marker{display:none}.chapter-no{font:600 13px "Space Grotesk";color:var(--green)}summary>span:nth-child(2){display:flex;align-items:baseline;gap:20px}summary b{font:600 clamp(22px,3vw,35px) "Space Grotesk"}summary small{color:var(--muted);font-size:14px}summary i{font-style:normal;font-size:28px;transition:.2s}details[open] summary i{transform:rotate(45deg)}.chapter-body{padding:10px 4px 40px 70px;display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.mission,.steps,.success{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}.mission span{font:700 10px "Space Grotesk";letter-spacing:.18em;color:var(--green)}.mission h3{font:600 25px "Space Grotesk";margin:10px 0}.mission p,.steps li{color:var(--muted);line-height:1.6}.steps{grid-row:span 2}.steps h4{font:600 18px "Space Grotesk";margin-top:0}.steps ol{padding-left:24px;margin-bottom:0}.steps li{padding:5px 0}.success{background:var(--green);color:white;display:grid;gap:7px;padding:22px 28px}.success span{color:#d8e3de;font-size:14px}.finale{padding:120px 24px;text-align:center;background:var(--lime)}.finale .eyebrow{color:var(--ink)}.finale h2{margin-bottom:38px}footer{padding:32px clamp(24px,7vw,110px);display:flex;justify-content:space-between;background:var(--ink);color:#afbbb6;font-size:12px;letter-spacing:.08em}@media(max-width:900px){.topbar nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding-top:55px}.console-scene{min-height:390px}.console{max-width:430px}.orbit-one{width:390px;height:390px}.journey{grid-template-columns:repeat(3,1fr)}.section-heading{grid-template-columns:1fr}.chapter-body{grid-template-columns:1fr;padding-left:0}.steps{grid-row:auto}.safety{grid-template-columns:1fr}.hero h1{font-size:68px}}@media(max-width:560px){.topbar{height:64px;padding:0 18px}.brand{font-size:12px}.nav-cta{padding:9px 12px}.hero{padding:55px 20px 70px}.hero h1{font-size:54px}.lead{font-size:17px}.quick-facts{gap:22px}.console-scene{min-height:300px}.orbit-one{width:300px;height:300px}.orbit-two{width:230px;height:230px}.console{border-radius:28px}.screen{border-width:7px;font-size:19px}.dpad{transform:scale(.72);transform-origin:left}.buttons{transform:scale(.72);transform-origin:right}.intro,.manual{padding:80px 20px}.journey{grid-template-columns:repeat(2,1fr)}.safety{margin:45px 20px;padding:28px}.safety h2{font-size:31px}summary{grid-template-columns:46px 1fr 26px}summary>span:nth-child(2){display:grid;gap:2px}.chapter-body{padding-bottom:28px}.mission,.steps{padding:22px}footer{gap:18px;flex-direction:column;text-align:center}}
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Hands on Lab — início">
-      <span class="brand-mark" aria-hidden="true">H</span>
-      <span>HANDS ON LAB</span>
-    </a>
-    <nav aria-label="Navegação principal">
-      <a href="#jornada">Jornada</a>
-      <a href="#seguranca">Segurança</a>
-      <a class="nav-cta" href="#manual">Começar montagem</a>
-    </nav>
+<main>
+  <header class="site-header">
+    <a href="./" aria-label="Hands on Lab — início"><span class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>hands on <b>lab</b></span></span></a>
+    <nav aria-label="Navegação principal"><a href="#experiencia">A experiência</a><a href="#jornada">A jornada</a><a href="manual/">Manual</a></nav>
+    <a class="header-cta" href="manual/">Começar a montar <span>→</span></a>
   </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow">MANUAL DE MONTAGEM · V1A</p>
-        <h1>Construa.<br><span>Aprenda.</span> Jogue.</h1>
-        <p class="lead">Um videogame que vocês constroem juntos — e jogam depois. Siga seis missões, entenda cada sistema e veja o console ganhar vida etapa por etapa.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#manual">Iniciar primeira missão</a>
-          <a class="button ghost" href="#jornada">Ver mapa da jornada</a>
-        </div>
-        <div class="quick-facts" aria-label="Informações rápidas">
-          <span><strong>6</strong> blocos</span>
-          <span><strong>1</strong> console</span>
-          <span><strong>∞</strong> descobertas</span>
-        </div>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span>●</span> CONSTRUA ALGO DE VERDADE</p>
+      <h1>Você não apenas joga.<br><em>Você constrói.</em></h1>
+      <p class="hero-lead">Um console portátil que nasce nas suas mãos. Monte seis sistemas, descubra como cada parte funciona e jogue no videogame que você mesmo criou.</p>
+      <div class="hero-actions"><a class="primary-button" href="manual/">Abrir manual de montagem <span>→</span></a><a class="text-button" href="#jornada"><span class="play">▶</span> Conheça a jornada</a></div>
+      <div class="hero-proof"><span>6</span><p><b>missões conectadas</b><br>do primeiro LED ao primeiro jogo</p></div>
+    </div>
+    <div class="console-scene" aria-label="Ilustração de um console portátil Hands on Lab">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="console">
+        <div class="console-screen"><span>HANDS ON LAB</span><strong>BUILD / LEARN / PLAY</strong><div class="screen-pixels"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="dpad"><i></i><i></i></div><div class="action-buttons"><i></i><i></i><i></i><i></i></div><div class="mini-buttons"><i></i><i></i></div><div class="speaker left"></div><div class="speaker right"></div>
       </div>
-      <div class="console-scene" aria-label="Ilustração de um console portátil">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="console">
-          <div class="screen"><span>READY?</span><small>BUILD / LEARN / PLAY</small></div>
-          <div class="dpad"><i></i><i></i></div>
-          <div class="buttons"><i></i><i></i><i></i><i></i></div>
-          <div class="mini-buttons"><i></i><i></i></div>
-        </div>
+      <span class="part-tag tag-one">ESP32-S3</span><span class="part-tag tag-two">6 sistemas</span><span class="part-tag tag-three">feito por você</span>
+    </div>
+  </section>
+  <section class="manifesto" id="experiencia">
+    <p class="section-kicker">NÃO É SÓ UM KIT</p>
+    <h2>Eletrônica com um motivo:<br><em>dar vida ao seu videogame.</em></h2>
+    <div class="manifesto-grid">
+      <p class="manifesto-lead">Cada componente que você encaixa ou solda tem uma função clara — e uma recompensa visível.</p>
+      <div class="principles">
+        <article><span>01</span><div><h3>Aprenda quando importa</h3><p>Conceitos técnicos aparecem no momento exato em que ajudam você a montar, testar ou corrigir.</p></div></article>
+        <article><span>02</span><div><h3>Progresso que você vê</h3><p>Cada bloco termina com um teste real: luz, comando, imagem, som ou memória.</p></div></article>
+        <article><span>03</span><div><h3>Feito para continuar</h3><p>Módulos substituíveis e arquitetura aberta para explorar, modificar e criar depois da montagem.</p></div></article>
       </div>
-    </section>
-
-    <section class="intro" id="jornada">
-      <p class="eyebrow">A JORNADA</p>
-      <h2>Da primeira faísca ao primeiro jogo</h2>
-      <p>Cada bloco acrescenta um subsistema funcional. Você monta, testa e só então avança para a próxima missão.</p>
-      <div class="journey">
-        <article><b>01</b><span>Energia</span><small>Dê vida ao console</small></article>
-        <article><b>02</b><span>Processador</span><small>Instale o cérebro</small></article>
-        <article><b>03</b><span>Controles</span><small>Dê comandos</small></article>
-        <article><b>04</b><span>Display</span><small>Abra os olhos</small></article>
-        <article><b>05</b><span>Som</span><small>Encontre a voz</small></article>
-        <article><b>06</b><span>Memória</span><small>Guarde os jogos</small></article>
-      </div>
-    </section>
-
-    <section class="safety" id="seguranca">
-      <div class="safety-icon">!</div>
-      <div>
-        <p class="eyebrow">ANTES DE COMEÇAR</p>
-        <h2>Segurança faz parte da montagem</h2>
-        <ul>
-          <li>Menores devem realizar as etapas de solda com supervisão de um adulto.</li>
-          <li>Trabalhe em local ventilado e mantenha o ferro sempre no suporte.</li>
-          <li>Nunca solde com a bateria instalada e confira a polaridade antes de energizar.</li>
-          <li>Desligue imediatamente se perceber fumaça, cheiro ou aquecimento intenso.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="manual" id="manual">
-      <div class="section-heading">
-        <div><p class="eyebrow">MANUAL INTERATIVO</p><h2>Escolha sua missão</h2></div>
-        <p>Abra cada bloco para consultar objetivo, componentes, montagem e critério de sucesso.</p>
-      </div>
-
-      <div class="chapters">
-        <details open>
-          <summary><span class="chapter-no">01</span><span><b>Energia</b><small>Dê vida ao console</small></span><i>+</i></summary>
-          <div class="chapter-body">
-            <div class="mission"><span>MISSÃO</span><h3>Monte o sistema de potência</h3><p>Instale o suporte 18650, o carregador TP4056, os reguladores de 3,3 V e 5 V e a chave geral.</p></div>
-            <div class="steps"><h4>Sequência</h4><ol><li>Com a bateria fora, fixe o suporte 18650 na traseira.</li><li>Encaixe o TP4056 com o USB voltado para fora.</li><li>Identifique e instale cada regulador na posição correta.</li><li>Solde a chave, começando por um terminal e conferindo o alinhamento.</li><li>Inspecione a montagem, instale a bateria e teste as duas tensões.</li></ol></div>
-            <div class="success"><b>✓ Missão concluída</b><span>Chave funcional, alimentação estável e nenhum aquecimento anormal.</span></div>
-          </div>
-        </details>
-
-        <details>
-          <summary><span class="chapter-no">02</span><span><b>Processador</b><small>Instale o cérebro do console</small></span><i>+</i></summary>
-          <div class="chapter-body"><div class="mission"><span>MISSÃO</span><h3>Instale o ESP32-S3</h3><p>O microcontrolador executa os jogos, lê os comandos e coordena todos os outros sistemas.</p></div><div class="steps"><h4>Sequência</h4><ol><li>Deixe a chave em OFF e remova a bateria.</li><li>Compare o módulo com a serigrafia e alinhe as duas fileiras.</li><li>Inicie o encaixe com pressão leve e alternada.</li><li>Pressione próximo aos conectores até o módulo ficar paralelo.</li><li>Reinstale a bateria e confirme a inicialização.</li></ol></div><div class="success"><b>✓ Missão concluída</b><span>Módulo firme, sem pinos tortos e com indicação luminosa.</span></div></div>
-        </details>
-
-        <details>
-          <summary><span class="chapter-no">03</span><span><b>Controles</b><small>Dê comandos ao console</small></span><i>+</i></summary>
-          <div class="chapter-body"><div class="mission"><span>MISSÃO</span><h3>Instale os dez botões</h3><p>Quatro direcionais, quatro botões de ação, Start e Select transformam comandos físicos em entradas digitais.</p></div><div class="steps"><h4>Sequência</h4><ol><li>Localize as dez posições e mantenha os caps separados.</li><li>Encaixe os botões até o corpo apoiar na PCB.</li><li>Solde apenas um terminal de cada botão.</li><li>Corrija o alinhamento e complete as soldas.</li><li>Instale os caps e teste cada comando no diagnóstico.</li></ol></div><div class="success"><b>✓ Missão concluída</b><span>Todos os botões respondem individualmente e sem travar.</span></div></div>
-        </details>
-
-        <details>
-          <summary><span class="chapter-no">04</span><span><b>Display</b><small>Abra os olhos do console</small></span><i>+</i></summary>
-          <div class="chapter-body"><div class="mission"><span>MISSÃO</span><h3>Instale e inicialize a tela</h3><p>O display transforma os dados do processador em imagens, menus e mundos jogáveis.</p></div><div class="steps"><h4>Sequência</h4><ol><li>Desligue o sistema e confira a orientação do conector.</li><li>Alinhe todos os pinos antes de aplicar pressão.</li><li>Encaixe de forma uniforme, sem pressionar a tela.</li><li>Inspecione pinos deslocados ou tortos.</li><li>Ligue e confirme uma imagem estável e sem artefatos.</li></ol></div><div class="success"><b>✓ Missão concluída</b><span>A primeira imagem aparece com orientação e cores corretas.</span></div></div>
-        </details>
-
-        <details>
-          <summary><span class="chapter-no">05</span><span><b>Som</b><small>Encontre a voz do console</small></span><i>+</i></summary>
-          <div class="chapter-body"><div class="mission"><span>MISSÃO</span><h3>Monte o caminho do áudio</h3><p>O PCM5102A converte o áudio digital, o PAM8403 amplifica e os alto-falantes tornam o resultado audível.</p></div><div class="steps"><h4>Sequência</h4><ol><li>Identifique DAC, amplificador, potenciômetro e alto-falantes.</li><li>Confira os jumpers e a orientação dos módulos.</li><li>Instale os módulos e conecte os canais esquerdo e direito.</li><li>Conecte o controle de volume e os alto-falantes.</li><li>Teste primeiro em volume baixo e aumente gradualmente.</li></ol></div><div class="success"><b>✓ Missão concluída</b><span>Áudio presente nos dois canais, sem ruído excessivo ou reinicializações.</span></div></div>
-        </details>
-
-        <details>
-          <summary><span class="chapter-no">06</span><span><b>Armazenamento</b><small>Crie as memórias do console</small></span><i>+</i></summary>
-          <div class="chapter-body"><div class="mission"><span>MISSÃO</span><h3>Instale e valide o microSD</h3><p>O cartão expande a biblioteca e mantém jogos e arquivos acessíveis ao sistema.</p></div><div class="steps"><h4>Sequência</h4><ol><li>Desligue o console e localize o conector do módulo.</li><li>Alinhe e fixe o leitor na orientação indicada pela PCB.</li><li>Prepare um cartão compatível e insira sem forçar.</li><li>Ligue o console e verifique a detecção.</li><li>Reinicie algumas vezes para confirmar leitura contínua.</li></ol></div><div class="success"><b>✓ Missão concluída</b><span>Cartão detectado em todos os boots e leitura estável.</span></div></div>
-        </details>
-      </div>
-    </section>
-
-    <section class="finale">
-      <p class="eyebrow">CONQUISTA FINAL</p>
-      <h2>Você não apenas ligou um videogame.<br><span>Você construiu este videogame.</span></h2>
-      <a class="button primary" href="#inicio">Voltar ao início</a>
-    </section>
-  </main>
-
-  <footer><span>Hands on Lab</span><span>Build / Learn / Play</span><span>Manual V1A · 2026</span></footer>
-  <script>
-document.querySelectorAll('details').forEach((item) => {
-  item.addEventListener('toggle', () => {
-    if (!item.open) return;
-    document.querySelectorAll('details[open]').forEach((other) => {
-      if (other !== item) other.open = false;
-    });
-  });
-});
-
-  </script>
+    </div>
+  </section>
+  <section class="journey" id="jornada">
+    <div class="section-heading"><div><p class="section-kicker">SUA JORNADA</p><h2>Seis missões.<br><em>Um console completo.</em></h2></div><p>Você avança sistema por sistema. Em cada etapa, prepara, monta, valida e conquista uma nova função.</p></div>
+    <div class="module-grid">
+      <a href="manual/#bloco-1" class="module-card" style="--module-color:#6C4DD9"><span class="module-number">01</span><span class="module-dot"></span><div class="module-icon">ϟ</div><h3>Energia</h3><p>Dê vida ao console</p><span class="module-link">Ver missão →</span></a>
+      <a href="manual/#bloco-2" class="module-card" style="--module-color:#2878D4"><span class="module-number">02</span><span class="module-dot"></span><div class="module-icon">▣</div><h3>Processador</h3><p>Instale o cérebro</p><span class="module-link">Ver missão →</span></a>
+      <a href="manual/#bloco-3" class="module-card" style="--module-color:#30A46C"><span class="module-number">03</span><span class="module-dot"></span><div class="module-icon">+</div><h3>Controles</h3><p>Dê comandos ao jogador</p><span class="module-link">Ver missão →</span></a>
+      <a href="manual/#bloco-4" class="module-card" style="--module-color:#F2B824"><span class="module-number">04</span><span class="module-dot"></span><div class="module-icon">▤</div><h3>Display</h3><p>Abra os olhos</p><span class="module-link">Ver missão →</span></a>
+      <a href="manual/#bloco-5" class="module-card" style="--module-color:#EF7B32"><span class="module-number">05</span><span class="module-dot"></span><div class="module-icon">◖))</div><h3>Som</h3><p>Encontre a voz</p><span class="module-link">Ver missão →</span></a>
+      <a href="manual/#bloco-6" class="module-card" style="--module-color:#D94F8A"><span class="module-number">06</span><span class="module-dot"></span><div class="module-icon">▰</div><h3>Armazenamento</h3><p>Guarde as memórias</p><span class="module-link">Ver missão →</span></a>
+    </div>
+  </section>
+  <section class="final-cta"><div><p class="section-kicker">PRONTO PARA COMEÇAR?</p><h2>Da primeira faísca<br>ao primeiro jogo.</h2></div><div><p>O manual acompanha você em cada decisão, com verificações claras antes de energizar o circuito.</p><a class="light-button" href="manual/">Começar pelo manual <span>→</span></a></div></section>
+  <footer><a href="./"><span class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>hands on <b>lab</b></span></span></a><p>Build / Learn / Play</p><p>Console portátil educacional · V1A</p></footer>
+</main>
 </body>
 </html>
-
-
