@@ -10,3 +10,13 @@
 
 .manual-content{min-height:100vh}
 
+
+/* Ferramenta do capítulo — leva ao gravador de jogos ao fim do bloco 06 */
+.tool-card{display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-left:4px solid var(--chapter);border-radius:0 10px 10px 0;padding:30px 36px;margin-top:16px;transition:.25s ease}
+.tool-card:hover{border-color:var(--chapter);box-shadow:0 18px 45px rgba(32,36,42,.08);transform:translateY(-3px)}
+.tool-card>div{min-width:min(100%,320px);flex:1}
+.tool-card p{font-size:9px;letter-spacing:.18em;font-weight:800;color:var(--chapter);margin-bottom:10px}
+.tool-card h3{font:600 22px/1.4 Poppins,Arial,sans-serif;margin:0 0 10px}
+.tool-card .tool-text{font:400 13px/1.65 Inter,Arial,sans-serif;letter-spacing:0;color:var(--muted);margin:0}
+.tool-go{background:var(--chapter);color:#fff;padding:14px 20px;border-radius:8px;font-weight:800;font-size:12px;white-space:nowrap}
+@media(max-width:800px){.tool-card{padding:24px}.tool-go{width:100%;text-align:center}}
