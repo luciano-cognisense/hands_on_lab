@@ -38,7 +38,7 @@
 .visual-card h3{font:700 18px/1.35 Poppins,Arial,sans-serif;margin:0 0 8px}
 .visual-card figcaption>div{color:var(--muted);font-size:12px;line-height:1.6}
 .visual-card ul{list-style:none;padding:14px 0 0;margin:14px 0 0;border-top:1px solid var(--line);display:grid;gap:8px}
-.visual-card li{display:flex;align-items:center;gap:9px;color:var(--ink);font-size:11px;font-weight:650}
+.visual-card li{display:flex;align-items:center;gap:9px;min-height:0;padding:0;background:transparent;border:0;border-radius:0;color:var(--ink);font-size:11px;font-weight:650}
 .visual-card li span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:color-mix(in srgb,var(--chapter) 13%,white);color:var(--chapter);font-size:9px;font-weight:900}
 .visual-card small{display:block;color:var(--chapter);font-size:10px;font-weight:700;margin-top:15px}
 .visual-card.prep{display:grid;grid-template-columns:minmax(260px,.78fr) 1.22fr;margin:-25px 0 54px;align-items:stretch}
