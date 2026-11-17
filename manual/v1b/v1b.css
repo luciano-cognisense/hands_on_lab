@@ -4,3 +4,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 .bench-guide{background:#f7f5f0;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:20px 0;font-size:13px}.bench-guide h4{font:700 15px Poppins,Arial,sans-serif;margin:0 0 8px}.bench-guide ol{padding-left:21px;margin:0 0 18px}.bench-guide li{margin:8px 0}.bench-guide p{margin:0}
+
+.activity .activity-state{display:inline-block;background:#eee9ff;color:#4f35ab;border-radius:6px;padding:5px 9px;font-size:11px;font-weight:700;margin:0 0 12px}.activity .activity-state.blocked{background:#fff3d7;color:#765b16}
