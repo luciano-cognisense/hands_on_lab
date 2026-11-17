@@ -1,0 +1,14 @@
+{
+  "name": "Approved V1B game launcher",
+  "sourceCommit": "a9c8fb9b",
+  "sourceImageSha256": "2541189a2ad8a917fb9d775107c92ffc2ee8cabae4f59e1ba592230e8d4f2c24",
+  "chip": "ESP32-S3",
+  "requiredLayout": "v1b-with-gbsp",
+  "installationEnabled": false,
+  "part": {
+    "path": "launcher-v1b-with-gbsp.bin",
+    "offset": 65536,
+    "size": 834544,
+    "sha256": "499aa84178a6f261913a188f88471c7320d69ed0620faf6bfbecbe958eb094e6"
+  }
+}
