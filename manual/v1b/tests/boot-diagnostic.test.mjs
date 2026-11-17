@@ -15,3 +15,13 @@ test('layout divergente interrompe antes de ler otadata',async()=>{
  await assert.rejects(inspectBoot(loader,{partitionTableSha256:'0'.repeat(64)}),/difere/);
  assert.deepEqual(calls,[0x8000]);
 });
+test('diagnóstico distingue launcher aprovado de conteúdo diferente',async()=>{
+ const table=new Uint8Array(0xc00),app=new Uint8Array([1,2,3]);
+ const sha=async data=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',data))].map(x=>x.toString(16).padStart(2,'0')).join('');
+ const manifest={partitionTableSha256:await sha(table)};
+ const restore={part:{offset:0x10000,size:3,sha256:await sha(app)}};
+ const loader={chip:{CHIP_NAME:'ESP32-S3'},readFlash:async(offset,size)=>offset===0x8000?table:offset===0xd000?new Uint8Array(0x2000):app};
+ assert.equal((await inspectBoot(loader,manifest,restore)).launcher,'approved');
+ restore.part.sha256='0'.repeat(64);
+ assert.equal((await inspectBoot(loader,manifest,restore)).launcher,'different');
+});

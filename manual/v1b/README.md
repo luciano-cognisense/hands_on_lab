@@ -78,3 +78,8 @@ medição elétrica ou validação no ESP32.
 O bundle local de esptool-js 0.5.6 em `vendor/` tem SHA-256
 `475e0e98fd051dc11bf34d8f83410764da11f3a0c40ecd33fd9647dc46b098b8`.
 Foi obtido da mesma versão usada pelo RetroGo Flasher.
+
+O diagnóstico também lê o slot do launcher em blocos de até 64 KiB e compara
+seu SHA-256 ao launcher aprovado. Resultado diferente exige investigação;
+mesmo o resultado igual não libera instalação, porque `otadata`, alimentação
+e retorno aos jogos ainda precisam de validação física.
