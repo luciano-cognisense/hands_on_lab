@@ -61,3 +61,22 @@ test('verificação concluída não pode ser reutilizada em outra reconexão',as
  await d.verifyAfterRestart();assert.equal(d.saved,null);
  await assert.rejects(d.verifyAfterRestart(),/Salve o Blink/);
 });
+test('handshake USB aceita apenas firmware V1B com identidade completa',async()=>{
+  const encoder=new TextEncoder();
+  const lines=[];
+  let controllerRef;
+  const port={
+    readable:new ReadableStream({start(controller){controllerRef=controller;}}),
+    writable:new WritableStream({write(data){lines.push(new TextDecoder().decode(data));const request=JSON.parse(lines.at(-1));if(request.command==='hello')controllerRef.enqueue(encoder.encode(JSON.stringify({protocol:1,id:request.id,ok:true,result:{protocol:1,firmware:'hol-activities',board:'v1b',version:'0.1.0',capabilities:['blink'],deviceId:'aabbccddeeff',bootId:'0'.repeat(32)}})+'\n'));}}),
+    open:async()=>{},close:async()=>{}
+  };
+  const d=new Device();const info=await d.connect({requestPort:async()=>port});
+  assert.equal(info.deviceId,'aabbccddeeff');assert.equal(d.ready,true);
+  await d.close();assert.equal(d.ready,false);
+});
+test('handshake recusa firmware de jogos mesmo na mesma porta USB',async()=>{
+ const encoder=new TextEncoder();let controllerRef;
+ const port={readable:new ReadableStream({start(c){controllerRef=c;}}),writable:new WritableStream({write(data){const req=JSON.parse(new TextDecoder().decode(data));controllerRef.enqueue(encoder.encode(JSON.stringify({protocol:1,id:req.id,ok:true,result:{protocol:1,firmware:'game-launcher',board:'v1b',version:'1.0',capabilities:['blink'],deviceId:'aabbccddeeff',bootId:'0'.repeat(32)}})+'\n'));}}),open:async()=>{},close:async()=>{}};
+ const d=new Device();await assert.rejects(d.connect({requestPort:async()=>port}),/compatível/);
+ assert.equal(d.ready,false);
+});

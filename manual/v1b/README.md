@@ -58,8 +58,7 @@ A seção do Blink verifica por SHA-256 tanto o firmware didático quanto o
 launcher aprovado de retorno. Ambos os manifestos mantêm
 `installationEnabled: false`. Essa verificação comprova a integridade dos
 arquivos servidos, não a compatibilidade da placa conectada ou o sucesso de
-uma gravação. O diagnóstico de boot permanece somente em código, pois a
-leitura física por esptool-js ainda não foi integrada à interface.
+uma gravação. O diagnóstico de boot está ligado à interface por esptool-js 0.5.6, mas ainda não foi testado na placa. Ele só lê a tabela e `otadata`; não libera gravação.
 
 ## Estados da conexão USB
 
@@ -75,3 +74,7 @@ O comando roda os testes do manual, confere tamanhos e SHA-256 dos pacotes
 de atividades e retorno, exige que ambos continuem bloqueados para
 instalação e verifica `git diff --check`. Ele não substitui teste visual,
 medição elétrica ou validação no ESP32.
+
+O bundle local de esptool-js 0.5.6 em `vendor/` tem SHA-256
+`475e0e98fd051dc11bf34d8f83410764da11f3a0c40ecd33fd9647dc46b098b8`.
+Foi obtido da mesma versão usada pelo RetroGo Flasher.
