@@ -1,0 +1,19 @@
+{
+  "name": "Hands On Lab activities",
+  "version": "0.1.0",
+  "chip": "ESP32-S3",
+  "flashSize": 16777216,
+  "installationEnabled": false,
+  "reason": "Aguardando valida\u00e7\u00e3o de alimenta\u00e7\u00e3o, USB e transi\u00e7\u00e3o do layout de jogos.",
+  "parts": [
+    {
+      "path": "hol_activities.bin",
+      "offset": 65536,
+      "size": 305536,
+      "sha256": "383ddcf6c0db790c3823d7ddc639ef48831c6ed8ddc4d3d647c5f0136c52bfb3"
+    }
+  ],
+  "partitionTableSha256": "9e23bc8c7275814221963f06cae955022bd76fc9faa35822e61e4764b53ec24a",
+  "requiredLayout": "v1b-with-gbsp",
+  "replaces": "launcher ota_0"
+}

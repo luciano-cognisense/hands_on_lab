@@ -1,0 +1,10 @@
+# Prototipo didatico: layout V1B com GBSP, preservando enderecos dos jogos e VFS.
+nvs,       data, nvs,   0x9000,   0x4000
+otadata,   data, ota,   0xd000,   0x2000
+phy_init,  data, phy,   0xf000,   0x1000
+launcher,  app,  ota_0, 0x10000,  0x130000
+retro-core,app,  ota_1, 0x140000, 0xe0000
+snes9x,    app,  ota_2, 0x220000, 0xb0000
+gwenesis,  app,  ota_3, 0x2d0000, 0x110000
+gbsp,      app,  ota_4, 0x3e0000, 0xd0000
+vfs,       data, fat,   0x4b0000, 0xb50000
